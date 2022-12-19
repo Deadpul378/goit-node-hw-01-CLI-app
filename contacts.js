@@ -12,7 +12,7 @@ async function listContacts() {
 
 async function getContactById(contactId) {
   const contacts = await listContacts();
-  const contact = contacts.find(item => item.id === contactId);
+  const contact = contacts.find((item) => item.id === contactId);
   return contact || null;
 }
 
@@ -33,7 +33,7 @@ async function addContact(name, email, phone) {
 
 async function removeContact(contactId) {
   const contacts = await listContacts();
-  const index = contacts.findIndex(item => item.id === contactId);
+  const index = contacts.findIndex((item) => item.id === contactId);
 
   if (index === -1) {
     return null;
